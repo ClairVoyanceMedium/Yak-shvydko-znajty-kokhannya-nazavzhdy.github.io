@@ -1,42 +1,112 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# 🔥 Robots.txt ultra-performant pour dominer le SEO, l'IA et la recherche vocale en 2025
+# 🔗 Site : https://clairvoyancemedium.github.io/Yak-shvydko-znajty-kokhannya-nazavzhdy.github.io/
+
+# ✅ Permet l'indexation complète des pages et du contenu important
 User-agent: *
-Disallow: /admin/
-Disallow: /tmp/
-Disallow: /private/
+Allow: /
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
-
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
+# 🚀 Autorisation spéciale pour Google, Bing et les moteurs IA
 User-agent: Googlebot
 Allow: /
-User-agent: AdsBot-Google
+
+User-agent: Googlebot-AI
 Allow: /
+
+User-agent: Googlebot-Voice
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
+User-agent: Bingbot-AI
+Allow: /
+
+User-agent: Bingbot-Voice
+Allow: /
+
+User-agent: *AI*
+Allow: /
+
+# 🏆 Prise en charge des assistants vocaux et des recherches IA avancées
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: AlexaBot
+Allow: /
+
+User-agent: SiriBot
+Allow: /
+
+# 🔍 Spécificité pour Google Images, Google News et indexation multimédia
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# 📍 Accélération de l’indexation pour les nouvelles pages
+Crawl-delay: 2
+Request-rate: 1/5s
+
+# 📢 Empêche l’indexation des répertoires inutiles pour éviter la dilution du référencement
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /search/
+Disallow: /*?*
+
+# 🔒 Protection contre les bots indésirables et crawlers abusifs
+User-agent: AhrefsBot
 Disallow: /
 
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+User-agent: SEMrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# 🗺️ Déclaration du sitemap XML pour un référencement rapide et optimal
+Sitemap: https://clairvoyancemedium.github.io/Yak-shvydko-znajty-kokhannya-nazavzhdy.github.io/sitemap.xml
+Sitemap: https://clairvoyancemedium.github.io/Yak-shvydko-znajty-kokhannya-nazavzhdy.github.io/sitemap_index.xml
+
+# 📂 Autorisation des fichiers multimédias importants pour le SEO
+User-agent: *
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# 🏆 Autorisation pour PWA (Progressive Web App) et fichiers critiques
+User-agent: *
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /manifest.json
+
+# 🔄 Recommandation d’actualisation fréquente
+Visit-time: 01:00-09:00
+
+# 🔗 Gestion des paramètres URL pour éviter le duplicate content
+User-agent: *
+Clean-param: sessionid /
+
+# 🔥 Règles pour la nouvelle génération d’indexation AI et voix
+Host: clairvoyancemedium.github.io
+
+# 🚀 SEO Friendly : Blocage des anciennes URL obsolètes
+User-agent: *
+Disallow: /old/
